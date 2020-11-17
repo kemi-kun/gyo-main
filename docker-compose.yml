@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  gyo-jenkins:
+    container_name: gyo-jenkins
+    image: jenkins
+    restart: unless-stopped
+
