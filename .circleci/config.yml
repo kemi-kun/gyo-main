@@ -8,8 +8,6 @@ jobs:
       - checkout:
           path: ~/gyo-main
       - run:
-          command: ls -a
-      - run:
           command: yarn
           when: always
       - run:
@@ -17,11 +15,7 @@ jobs:
           when: always
       - run:
           command: yarn test
-      - store_test_results:
-          path: ~/reports
-      - store_artifacts:
-          path: ~/reports 
 workflows:
-  test-and-deploy:
+  test:
     jobs:
     - run-test-suite
