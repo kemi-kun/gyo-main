@@ -7,6 +7,8 @@ jobs:
     steps:
       - checkout
       - run:
+          command: ls -a
+      - run:
           command: cd gyo-nuxt
           when: always
       - run:
