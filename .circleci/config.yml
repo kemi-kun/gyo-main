@@ -6,7 +6,10 @@ jobs:
     working_directory: ~/gyo-nuxt
     steps:
       - run:
-          command: yarn add ava tap-xunit --dev
+          command: yarn
+          when: always
+      - run:
+          command: yarn --dev
           when: always
       - run:
           command: yarn test
