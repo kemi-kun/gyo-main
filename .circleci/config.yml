@@ -1,13 +1,14 @@
 version: 2.1
 jobs:
   run-test-suite:
+    working_directory: ~/gyo-main/gyo-nuxt
     docker:
       - image: circleci/node:10.20.0
-    working_directory: ~/gyo-main/gyo-nuxt
     steps:
       - checkout
-      # - restore_cache:
-      #     key: deps1-{{ .Branch }}-{{ checksum "requirements.txt" }}-{{ checksum "test-requirements.txt" }}
+      - run:
+          command: ls -a
+          when: always
       - run:
           command: yarn
           when: always
