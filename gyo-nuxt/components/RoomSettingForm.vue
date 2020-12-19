@@ -1,6 +1,6 @@
 <template>
   <div id='room-setting-form'>
-    <h1>Setting</h1>
+    <h1>Settings</h1>
     <div id='form-fields'>
       <b-form>
         <label class="mr-sm-2" for="inline-form-set-timmer">Timer</label>

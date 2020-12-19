@@ -1,5 +1,5 @@
 <template>
-  <div id='room-setting'>
+  <div id='room-settings'>
     <nav-bar></nav-bar>
     <room-setting-form></room-setting-form>
   </div>
