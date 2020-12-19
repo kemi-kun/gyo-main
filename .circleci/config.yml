@@ -3,7 +3,7 @@ jobs:
   run-test-suite:
     docker:
       - image: circleci/node:10.20.0
-    working_directory: ~/gyo-nuxt
+    working_directory: ~/gyo-main/gyo-nuxt
     steps:
       - run:
           command: yarn
