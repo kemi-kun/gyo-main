@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        gyo-nuxt
+        gyo-main
       </h1>
       <div class="links">
         <a

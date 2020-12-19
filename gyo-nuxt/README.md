@@ -1,4 +1,4 @@
-# gyo-nuxt
+# gyo-main
 
 ## Build Setup
 
