@@ -6,10 +6,7 @@ jobs:
     working_directory: ~/gyo-nuxt
     steps:
       - run:
-          command: |
-            yarn add ava tap-xunit --dev # or you could use npm
-            mkdir -p ~/reports
-            ava --tap | tap-xunit > ~/reports/ava.xml
+          command: yarn add ava tap-xunit --dev
           when: always
       - run:
           command: yarn test
