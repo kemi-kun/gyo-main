@@ -11,7 +11,7 @@ jobs:
             mkdir -p ~/reports
             ava --tap | tap-xunit > ~/reports/ava.xml
           when: always
-      - test:
+      - run:
           command: yarn test
       - store_test_results:
           path: ~/reports
