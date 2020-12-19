@@ -5,7 +5,7 @@ jobs:
     docker:
       - image: circleci/node:10.20.0
     steps:
-      - checkout
+      - checkout:
           path: ~/gyo-main
       - run:
           command: ls -a
