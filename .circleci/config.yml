@@ -1,13 +1,13 @@
 version: 2.1
 jobs:
   run-test-suite:
-    working_directory: ~/gyo-main/gyo-nuxt
+    working_directory: ~/gyo-main
     docker:
       - image: circleci/node:10.20.0
     steps:
       - checkout
       - run:
-          command: ls -a
+          command: cd gyo-nuxt
           when: always
       - run:
           command: yarn
