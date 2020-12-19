@@ -1,0 +1,23 @@
+version: 2.1
+jobs:
+  run-test-suite:
+    docker:
+      - image: circleci/node:10.20.0
+    working_directory: ~/gyo-nuxt
+    steps:
+      - run:
+          command: |
+            yarn add ava tap-xunit --dev # or you could use npm
+            mkdir -p ~/reports
+            ava --tap | tap-xunit > ~/reports/ava.xml
+          when: always
+      - test:
+          command: yarn test
+      - store_test_results:
+          path: ~/reports
+      - store_artifacts:
+          path: ~/reports 
+workflows:
+  test-and-deploy:
+    jobs:
+    - run-test-suite
