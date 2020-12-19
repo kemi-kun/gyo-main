@@ -2,6 +2,8 @@ version: "3.8"
 services:
   gyo-jenkins:
     container_name: gyo-jenkins
-    image: jenkins
+    image: jenkins/jenkins
     restart: unless-stopped
+    ports: 
+     - 8081:8080
 
