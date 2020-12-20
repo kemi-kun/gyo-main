@@ -9,7 +9,7 @@
         <b-form-input id="inline-form-set-num_words" class="mb-2 mr-sm-2 mb-sm-0" placeholder="15"></b-form-input>
         <b-button variant="primary" type='submit'>Save</b-button>
       </b-form>
-      <b-button variant="secondary">Back</b-button>
+      <b-button variant="secondary" href='select-genre'>Back</b-button>
     </div>
   </div>
 </template>
