@@ -9,7 +9,9 @@
 <script>
 import TimerCountdown from '~/components/TimerCountdown.vue'
 export default {
-  components: { TimerCountdown }
+  components: {
+    TimerCountdown
+  }
 }
 </script>
 
