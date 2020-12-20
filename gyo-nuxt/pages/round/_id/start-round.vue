@@ -1,7 +1,7 @@
 <template>
   <div id='start-round'>
-    <wait-round></wait-round>
-    <word-countdown cword='Hate'></word-countdown>
+    <wait-round :timer=timerCount>></wait-round>
+    <word-countdown cword='Hate' v-if='timerCount === 0'></word-countdown>
     <enter-answer-form cword='Hate'></enter-answer-form>
     <word-answer cword='Hate'></word-answer>
   </div>
@@ -18,7 +18,27 @@ export default {
     WordCountdown,
     EnterAnswerForm,
     WordAnswer
+  },
+  data () {
+    return {
+      timerCount: 3
+    }
+  },
+
+  methods: {
+    countDownTimer () {
+      if (this.timerCount > 0) {
+        setTimeout(() => {
+          this.timerCount -= 1
+          this.countDownTimer()
+        }, 1000)
+      }
+    }
+  },
+  created () {
+    this.countDownTimer()
   }
+
 }
 </script>
 
