@@ -1,8 +1,8 @@
 <template>
   <div id='word-countdown'>
     <challenge-word :cword='tempCword'></challenge-word>
-    <timer-countdown></timer-countdown>
-    <b-button id='answer-button' size='lg' href='#'>Answer</b-button>
+    <timer-countdown :timer=timer></timer-countdown>
+    <b-button id='answer-button' size='lg' href='enter-answer-form'>Answer</b-button>
   </div>
 </template>
 
@@ -18,11 +18,11 @@ export default {
     cword: {
       type: String,
       required: true
+    },
+    timer: {
+      type: Number,
+      required: true
     }
-    // timer: {
-    //   type: TimerCountdown,
-    //   required: true
-    // }
   },
   data () {
     return {
