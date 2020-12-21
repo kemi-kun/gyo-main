@@ -14,5 +14,5 @@ The web application that implements Game of Song Association by ELLE.
 | Natthaphon Rakprakobkij      | 6110546402 | [mark47546](https://github.com/mark47546)     |
 
 ## Documentations
-[GyOZa design document](https://docs.google.com/document/d/1BmOG5U2i_pK35sIegfBdnq91SZHEfo-KXHYn29Cmlq0/edit?usp=sharing)
-[GyOZA user manual](https://docs.google.com/document/d/1rbnwyKtlv4f-u44C6UFbbYm4q8dsNZWO3gnQBGK1QH8/edit?usp=sharing)
+- [GyOZa design document](https://docs.google.com/document/d/1BmOG5U2i_pK35sIegfBdnq91SZHEfo-KXHYn29Cmlq0/edit?usp=sharing)
+- [GyOZA user manual](https://docs.google.com/document/d/1rbnwyKtlv4f-u44C6UFbbYm4q8dsNZWO3gnQBGK1QH8/edit?usp=sharing)
