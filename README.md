@@ -11,7 +11,6 @@ The web application that implements Game of Song Association by ELLE.
 | Mai Norapong                 | 6110545619 | [MaiMee1](https://github.com/MaiMee1)         |
 | Wijantra Cojamnong           | 6110545627 | [Wijantra](https://github.com/Wijantra)       |
 | Tharathorn Bunrattanasathian | 6110546011 | [th-bunratta](https://github.com/th-bunratta) |
-| Natthaphon Rakprakobkij      | 6110546402 | [mark47546](https://github.com/mark47546)     |
 
 ## Documentations
 - [GyOZa design document](https://docs.google.com/document/d/1BmOG5U2i_pK35sIegfBdnq91SZHEfo-KXHYn29Cmlq0/edit?usp=sharing)
