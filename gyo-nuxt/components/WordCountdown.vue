@@ -1,9 +1,10 @@
 <template>
   <div id='word-countdown'>
     <challenge-word :cword='tempCword' v-if='!show'></challenge-word>
-    <p v-if='!show'>{{timerCountWord}}</p>
+    <p>{{answerStatus}} Score {{score}}</p>
+    <p>{{timerCountWord}}</p>
     <b-button id='answer-button' size='lg' v-if='!show' v-on:click='show = true'>Answer</b-button>
-    <enter-answer-form cword='Hate' v-if='show'></enter-answer-form>
+    <enter-answer-form @back="handleAnswerStatus($event)" cword='Hate' v-if='show'></enter-answer-form>
   </div>
 </template>
 
@@ -24,7 +25,10 @@ export default {
       tempCword: this.cword,
       timerCountWord: 10,
       timerMessage: 0,
-      show: false
+      show: false,
+      score: 0,
+      answerStatus: 'Corerect',
+      backFromAnswer: false
     }
   },
   emits: ['time-up'],
@@ -40,8 +44,16 @@ export default {
       }
     },
     notify () {
-      console.log('sent ' + this.timerMessage)
       this.$emit('time-up', this.timerMessage)
+    },
+    handleAnswerStatus (event) {
+      this.backFromAnswer = event
+      this.checkBackstatus(event)
+    },
+    checkBackstatus (event) {
+      if (this.backFromAnswer) {
+        this.show = false
+      }
     }
   },
   created () {
