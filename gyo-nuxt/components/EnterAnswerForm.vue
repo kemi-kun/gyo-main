@@ -9,7 +9,7 @@
         <b-form-input id="song-name" class="mb-2 mr-sm-2 mb-sm-0" placeholder="enter song name"></b-form-input>
         <label class="mr-sm-2" for="inline-form-set-num_words">Artist name</label>
         <b-form-input id="inline-form-set-num_words" class="mb-2 mr-sm-2 mb-sm-0" placeholder="artist name"></b-form-input>
-        <b-button variant="primary" type='submit' href='word-countdown'>Submit answer</b-button>
+        <b-button variant="primary" type='submit'>Submit answer</b-button>
       </b-form>
     </div>
   </div>

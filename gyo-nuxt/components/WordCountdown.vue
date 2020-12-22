@@ -1,8 +1,9 @@
 <template>
   <div id='word-countdown'>
-    <challenge-word :cword='tempCword'></challenge-word>
-    <p >{{timerCountWord}}</p>
-    <b-button id='answer-button' size='lg' href='enter-answer-form'>Answer</b-button>
+    <challenge-word :cword='tempCword' v-if='!show'></challenge-word>
+    <p v-if='!show'>{{timerCountWord}}</p>
+    <b-button id='answer-button' size='lg' v-if='!show' v-on:click='show = true'>Answer</b-button>
+    <enter-answer-form cword='Hate' v-if='show'></enter-answer-form>
   </div>
 </template>
 
@@ -22,7 +23,8 @@ export default {
     return {
       tempCword: this.cword,
       timerCountWord: 10,
-      timerMessage: 0
+      timerMessage: 0,
+      show: false
     }
   },
   emits: ['time-up'],
