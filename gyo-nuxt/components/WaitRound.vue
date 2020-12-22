@@ -1,5 +1,5 @@
 <template>
-  <div id='wait-round>'>
+  <div id='wait-round'>
     <h1>Round 1</h1>
     <timer-countdown :timer=timer></timer-countdown>
   </div>

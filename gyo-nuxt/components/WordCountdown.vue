@@ -1,33 +1,46 @@
 <template>
   <div id='word-countdown'>
     <challenge-word :cword='tempCword'></challenge-word>
-    <timer-countdown :timer=timer></timer-countdown>
+    <p>{{timerCountWord}}</p>
     <b-button id='answer-button' size='lg' href='enter-answer-form'>Answer</b-button>
   </div>
 </template>
 
 <script>
-import TimerCountdown from '~/components/TimerCountdown.vue'
 import ChallengeWord from '~/components/ChallengeWord.vue'
 export default {
   components: {
-    TimerCountdown,
     ChallengeWord
   },
   props: {
     cword: {
       type: String,
       required: true
-    },
-    timer: {
-      type: Number,
-      required: true
     }
   },
   data () {
     return {
-      tempCword: this.cword
+      tempCword: this.cword,
+      timerCountWord: 10
     }
+  },
+  methods: {
+    countDownTimerWord () {
+      if (this.timerCountWord > 0) {
+        setTimeout(() => {
+          this.timerCountWord -= 1
+          this.countDownTimerWord()
+        }, 1000)
+      }
+    },
+    sendResult () {
+      if (this.timerCountWord === 0) {
+        this.$emit('send-result', 'true')
+      }
+    }
+  },
+  created () {
+    this.countDownTimerWord()
   }
 }
 </script>

@@ -2,7 +2,6 @@
   <div id='enter-answer-form'>
     <div id='word-timer-wraper'>
       <span>Word: {{ cword }}</span>
-      <timer-countdown></timer-countdown>
     </div>
     <div id='form-fields'>
       <b-form>
@@ -17,11 +16,7 @@
 </template>
 
 <script>
-import TimerCountdown from '~/components/TimerCountdown.vue'
 export default {
-  components: {
-    TimerCountdown
-  },
   props: {
     cword: {
       type: String,
