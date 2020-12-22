@@ -1,9 +1,9 @@
 <template>
   <div id='start-round'>
     <wait-round :timer=timerCount v-if='timerCount > 0'></wait-round>
-    <word-countdown cword='Hate' v-else v-on:send-result="showResultData"></word-countdown>
+    <word-countdown @time-up="handleTimeup($event)" cword='Hate' v-else ></word-countdown>
     <enter-answer-form cword='Hate'></enter-answer-form>
-    <word-answer cword='Hate'></word-answer>
+    <word-answer cword='Hate' v-if="fromChild === 0"></word-answer>
   </div>
 </template>
 
@@ -22,7 +22,8 @@ export default {
   data () {
     return {
       timerCount: 3,
-      showRound: true
+      showRound: true,
+      fromChild: 10
     }
   },
   methods: {
@@ -34,8 +35,8 @@ export default {
         }, 1000)
       }
     },
-    showResultData () {
-      console.log('Data received from child: ')
+    handleTimeup (event) {
+      this.fromChild = event
     }
   },
   created () {

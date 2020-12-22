@@ -1,7 +1,7 @@
 <template>
   <div id='word-countdown'>
     <challenge-word :cword='tempCword'></challenge-word>
-    <p>{{timerCountWord}}</p>
+    <p >{{timerCountWord}}</p>
     <b-button id='answer-button' size='lg' href='enter-answer-form'>Answer</b-button>
   </div>
 </template>
@@ -21,9 +21,11 @@ export default {
   data () {
     return {
       tempCword: this.cword,
-      timerCountWord: 10
+      timerCountWord: 10,
+      timerMessage: 0
     }
   },
+  emits: ['time-up'],
   methods: {
     countDownTimerWord () {
       if (this.timerCountWord > 0) {
@@ -31,12 +33,13 @@ export default {
           this.timerCountWord -= 1
           this.countDownTimerWord()
         }, 1000)
+      } else if (this.timerCountWord === 0) {
+        this.notify()
       }
     },
-    sendResult () {
-      if (this.timerCountWord === 0) {
-        this.$emit('send-result', 'true')
-      }
+    notify () {
+      console.log('sent ' + this.timerMessage)
+      this.$emit('time-up', this.timerMessage)
     }
   },
   created () {
