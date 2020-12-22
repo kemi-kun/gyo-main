@@ -1,8 +1,8 @@
 <template>
   <div id='how-to-play'>
-    <h1>How to play</h1>
+    <h1>ℍ𝕠𝕨 𝕥𝕠 𝕡𝕝𝕒𝕪</h1>
     <div id='how-to-play-content'>
-      <p>Some content</p>
+      <p>To be added.</p>
     </div>
   </div>
 </template>

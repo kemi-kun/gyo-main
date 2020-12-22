@@ -1,6 +1,8 @@
 <template>
   <div id='room-settings'>
-    <nav-bar></nav-bar>
+    <div class='bar'>
+      <nav-bar></nav-bar>
+    </div>
     <room-setting-form></room-setting-form>
   </div>
 </template>
@@ -17,5 +19,7 @@ export default {
 </script>
 
 <style>
-
+.bar {
+  height: 150px;
+}
 </style>

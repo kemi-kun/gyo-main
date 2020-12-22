@@ -1,13 +1,22 @@
 <template>
   <div id='index'>
-    <nav-bar></nav-bar>
+    <div class='bar'>
+      <nav-bar></nav-bar>
+    </div>
     <b-container>
-      <h1>Welcome to Gyoza</h1>
+      <div class='title'>
+        <h1>𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 𝔾𝕪𝕠𝕫𝕒</h1>
+      </div>
       <div class='wrap-button'>
         <b-button v-if='!show' id='start-button' size='lg' v-on:click='show = true'>Start</b-button>
         <select-mode v-if='show'></select-mode>
       </div>
-      <how-to-play></how-to-play>
+      <div class='blank-line'>
+        <h1>    </h1>
+      </div>
+      <div class='how-to-play'>
+        <how-to-play></how-to-play>
+      </div>
     </b-container>
   </div>
 </template>
@@ -29,8 +38,26 @@ export default {
 </script>
 
 <style>
+.bar {
+  height: 200px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  --var-txt-color: #000000;
+  color: var(--var-txt-color);
+}
 .wrap-button {
   display: flex;
   justify-content: center;
+}
+.blank-line {
+  height: 75px;
+}
+.how-to-play {
+  display: flex;
+  justify-content: center;
+  --var-txt-color: #000000;
+  color: var(--var-txt-color);
 }
 </style>

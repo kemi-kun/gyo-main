@@ -1,7 +1,9 @@
 <template>
   <div id='set-user-name'>
-    <h1>Set username</h1>
-    <div id='username-form'>
+    <div  class='setting-username-title'>
+      <h1>𝕊𝕖𝕥 𝕦𝕤𝕖𝕣𝕟𝕒𝕞𝕖</h1>
+    </div>
+    <div  class='setting-username-form' id='username-form'>
       <b-nav-form>
         <b-form-input class="mr-sm-2" placeholder="Username"></b-form-input>
         <b-button
@@ -30,5 +32,14 @@ export default {
 </script>
 
 <style>
-
+.setting-username-title {
+  display: flex;
+  justify-content: center;
+  --var-txt-color: #000000;
+  color: var(--var-txt-color);
+}
+.setting-username-form {
+  display: flex;
+  justify-content: center;
+}
 </style>

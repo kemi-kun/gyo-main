@@ -1,6 +1,8 @@
 <template>
   <div id='select-genre'>
-    <nav-bar></nav-bar>
+    <div class='bar'>
+      <nav-bar></nav-bar>
+    </div>
     <b-container>
       <genre-form></genre-form>
     </b-container>
@@ -19,5 +21,7 @@ export default {
 </script>
 
 <style>
-
+.bar {
+  height: 200px;
+}
 </style>
