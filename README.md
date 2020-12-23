@@ -6,6 +6,10 @@ The web application that implements Game of Song Association by ELLE.
 
 - API Backend: https://github.com/KooCook/slap
 
+## Overview
+
+Gyoza is a web application that implements Game of Song Association by ELLE. The project is divided into two parts, the Gyoza part and the SLAP part. The Gyoza part provides the user interface of the application. The SLAP part provides the API endpoints that generate the challenge words from the lyrics of the songs.
+
 ## Team members
 
 | Name                         | Student ID | GitHub                                        |
