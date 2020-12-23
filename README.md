@@ -2,6 +2,10 @@
 
 The web application that implements Game of Song Association by ELLE.
 
+## Requirements
+
+- API Backend: https://github.com/KooCook/slap
+
 ## Team members
 
 | Name                         | Student ID | GitHub                                        |
@@ -12,6 +16,6 @@ The web application that implements Game of Song Association by ELLE.
 | Wijantra Cojamnong           | 6110545627 | [Wijantra](https://github.com/Wijantra)       |
 | Tharathorn Bunrattanasathian | 6110546011 | [th-bunratta](https://github.com/th-bunratta) |
 
-## Documentations
-- [GyOZa design document](https://docs.google.com/document/d/1BmOG5U2i_pK35sIegfBdnq91SZHEfo-KXHYn29Cmlq0/edit?usp=sharing)
-- [GyOZA user manual](https://docs.google.com/document/d/1rbnwyKtlv4f-u44C6UFbbYm4q8dsNZWO3gnQBGK1QH8/edit?usp=sharing)
+## Documents
+- [Design Document](https://docs.google.com/document/d/1BmOG5U2i_pK35sIegfBdnq91SZHEfo-KXHYn29Cmlq0/edit?usp=sharing)
+- [User Manual](https://docs.google.com/document/d/1rbnwyKtlv4f-u44C6UFbbYm4q8dsNZWO3gnQBGK1QH8/edit?usp=sharing)
