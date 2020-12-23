@@ -11,11 +11,16 @@ pipeline {
         //         git branch: 'master', url: 'https://github.com/kemi-kun/gyo-main.git'
         //     }
         // }
-        stage('Dependency installation') { 
+        stage('Builder') { 
             steps {
-                sh 'npm install' 
+                sh './builder.sh' 
             }
         }
+        // stage('Dependency installation') { 
+        //     steps {
+        //         sh 'npm install' 
+        //     }
+        // }
         stage('Test') {
             steps {
                 sh 'npm run test'
@@ -24,6 +29,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh 'npm start'
             }
         }
     }
