@@ -23,3 +23,5 @@ Gyoza is a web application that implements Game of Song Association by ELLE. The
 ## Documents
 - [Design Document](https://docs.google.com/document/d/1BmOG5U2i_pK35sIegfBdnq91SZHEfo-KXHYn29Cmlq0/edit?usp=sharing)
 - [User Manual](https://docs.google.com/document/d/1rbnwyKtlv4f-u44C6UFbbYm4q8dsNZWO3gnQBGK1QH8/edit?usp=sharing)
+- [Deployment Guide](https://github.com/kemi-kun/gyo-main/blob/master/wiki/deployment.md)
+
