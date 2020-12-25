@@ -26,19 +26,19 @@ jobs:
           path: ~/gyo-main
       - restore_cache:
           keys:
-            - v1-deps-{{ .Branch }}-{{ checksum "yaron.lock" }}
+            - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
             - v1-deps-{{ .Branch }}-
             - v1-deps-
       - run:
           command: yarn
           when: always
       - save_cache:
-          key: v1-deps-{{ .Branch }}-{{ checksum "yaron.lock" }}
+          key: v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
-              - ~/usr/local/lib/node_modules
+              - ~/gyo-main/gyo-nuxt/node_modules
       - run:
           command: |
-            cd ~/usr/local/lib/node_modules
+            cd ~/gyo-main/gyo-nuxt/node_modules
             ls -a
       - run:
           command: yarn --dev
