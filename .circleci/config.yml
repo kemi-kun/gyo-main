@@ -24,9 +24,22 @@ jobs:
             rmdir gyo-nuxt
       - checkout:
           path: ~/gyo-main
+      - restore_cache:
+          keys:
+            - v1-deps-{{ .Branch }}-{{ checksum "yaron.lock" }}
+            - v1-deps-{{ .Branch }}-
+            - v1-deps-
       - run:
           command: yarn
           when: always
+      - save_cache:
+          key: v1-deps-{{ .Branch }}-{{ checksum "yaron.lock" }}
+          paths:
+              - ~/usr/local/lib/node_modules
+      - run:
+          command: |
+            cd ~/usr/local/lib/node_modules
+            ls -a
       - run:
           command: yarn --dev
           when: always
