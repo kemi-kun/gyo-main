@@ -1,8 +1,5 @@
 <template>
   <div id='index'>
-    <div class='bar'>
-      <nav-bar></nav-bar>
-    </div>
     <b-container>
       <div class='title'>
         <h1>𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 𝔾𝕪𝕠𝕫𝕒</h1>
@@ -22,12 +19,10 @@
 </template>
 
 <script>
-import NavBar from '~/components/NavBar.vue'
 import HowToPlay from '~/components/HowToPlay.vue'
 import SelectMode from '~/components/SelectMode.vue'
 export default {
   components: {
-    NavBar,
     HowToPlay,
     SelectMode
   },

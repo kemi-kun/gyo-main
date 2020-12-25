@@ -1,8 +1,5 @@
 <template>
   <div id='set-username'>
-    <div class='bar'>
-      <nav-bar></nav-bar>
-    </div>
     <b-container>
       <usename-form></usename-form>
     </b-container>
