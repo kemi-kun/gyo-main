@@ -1,10 +1,27 @@
 version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.1.1
 jobs:
   run-test-suite:
     working_directory: ~/gyo-main/gyo-nuxt
     docker:
-      - image: circleci/node:10.20.0
+      - image: cimg/node:14.15.3-browsers
     steps:
+      - browser-tools/install-browser-tools:
+          chrome-version: 85.0.4183.102
+          firefox-version: 80.0.1
+      - run:
+          command: |
+            google-chrome --version
+            firefox --version
+            geckodriver --version
+            chromedriver --version
+            java -jar /usr/local/bin/selenium.jar --version
+          name: Check installed browsers
+      - run:
+          command: |
+            cd ..
+            rmdir gyo-nuxt
       - checkout:
           path: ~/gyo-main
       - run:
@@ -18,4 +35,4 @@ jobs:
 workflows:
   test:
     jobs:
-    - run-test-suite
+      - run-test-suite
