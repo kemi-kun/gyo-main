@@ -12,14 +12,6 @@ jobs:
           firefox-version: 80.0.1
       - run:
           command: |
-            google-chrome --version
-            firefox --version
-            geckodriver --version
-            chromedriver --version
-            java -jar /usr/local/bin/selenium.jar --version
-          name: Check installed browsers
-      - run:
-          command: |
             cd ..
             rmdir gyo-nuxt
       - checkout:
@@ -36,10 +28,6 @@ jobs:
           key: v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
               - ~/gyo-main/gyo-nuxt/node_modules
-      - run:
-          command: |
-            cd ~/gyo-main/gyo-nuxt/node_modules
-            ls -a
       - run:
           command: yarn --dev
           when: always
