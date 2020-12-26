@@ -44,5 +44,9 @@ module.exports = {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  }
+  },
+
+  serverMiddleware: [
+    { path: '/api', handler: '~/api/sample.js' }
+  ]
 }
