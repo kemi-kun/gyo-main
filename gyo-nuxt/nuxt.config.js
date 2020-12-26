@@ -46,6 +46,7 @@ export default {
   build: {
   },
   serverMiddleware: [
-    { path: '/api', handler: '~/api/sample.js' }
+    { path: '/api', handler: '~/api/sample.js' },
+    '~/api/index.js'
   ]
 }

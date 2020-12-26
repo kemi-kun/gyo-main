@@ -15,7 +15,7 @@
     "test:e2e": "cross-env TEST=e2e ava ./test/e2e/**/*"
   },
   "dependencies": {
-    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/axios": "^5.12.4",
     "@nuxtjs/pwa": "^3.0.2",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.17.3",

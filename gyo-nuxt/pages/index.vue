@@ -13,6 +13,7 @@
       </div>
       <div class='how-to-play'>
         <how-to-play></how-to-play>
+        {{ content }}
       </div>
     </b-container>
   </div>
@@ -26,8 +27,12 @@ export default {
     HowToPlay,
     SelectMode
   },
+  async fetch () {
+    this.content = await this.$axios.$get('http://localhost:3000/index/test/')
+  },
+  fetchOnServer: true,
   data () {
-    return { show: false }
+    return { show: false, content: 'cilent side' }
   }
 }
 </script>
