@@ -4,7 +4,12 @@
 
 ### Build Setup
 
-install dependencies
+1. Go to `gyo-nuxt/`
+```shell
+cd gyo-nuxt
+```
+
+2. install dependencies
 ```bash
 $ yarn install
 ````
