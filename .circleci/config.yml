@@ -1,15 +1,33 @@
 version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.1.1
 jobs:
   run-test-suite:
     working_directory: ~/gyo-main/gyo-nuxt
     docker:
-      - image: circleci/node:10.20.0
+      - image: cimg/node:14.15.3-browsers
     steps:
+      - browser-tools/install-browser-tools:
+          chrome-version: 85.0.4183.102
+          firefox-version: 80.0.1
+      - run:
+          command: |
+            cd ..
+            rmdir gyo-nuxt
       - checkout:
           path: ~/gyo-main
+      - restore_cache:
+          keys:
+            - v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - v1-deps-{{ .Branch }}-
+            - v1-deps-
       - run:
           command: yarn
           when: always
+      - save_cache:
+          key: v1-deps-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+              - ~/gyo-main/gyo-nuxt/node_modules
       - run:
           command: yarn --dev
           when: always
@@ -18,4 +36,4 @@ jobs:
 workflows:
   test:
     jobs:
-    - run-test-suite
+      - run-test-suite
