@@ -2,6 +2,14 @@
 
 The web application that implements Game of Song Association by ELLE.
 
+## Requirements
+
+- API Backend: https://github.com/KooCook/slap
+
+## Overview
+
+Gyoza is a web application that implements Game of Song Association by ELLE. The project is divided into two parts, the Gyoza part and the SLAP part. The Gyoza part provides the user interface of the application. The SLAP part provides the API endpoints that generate the challenge words from the lyrics of the songs.
+
 ## Team members
 
 | Name                         | Student ID | GitHub                                        |
@@ -12,6 +20,8 @@ The web application that implements Game of Song Association by ELLE.
 | Wijantra Cojamnong           | 6110545627 | [Wijantra](https://github.com/Wijantra)       |
 | Tharathorn Bunrattanasathian | 6110546011 | [th-bunratta](https://github.com/th-bunratta) |
 
-## Documentations
-- [GyOZa design document](https://docs.google.com/document/d/1BmOG5U2i_pK35sIegfBdnq91SZHEfo-KXHYn29Cmlq0/edit?usp=sharing)
-- [GyOZA user manual](https://docs.google.com/document/d/1rbnwyKtlv4f-u44C6UFbbYm4q8dsNZWO3gnQBGK1QH8/edit?usp=sharing)
+## Documents
+- [Design Document](https://docs.google.com/document/d/1BmOG5U2i_pK35sIegfBdnq91SZHEfo-KXHYn29Cmlq0/edit?usp=sharing)
+- [User Manual](https://docs.google.com/document/d/1rbnwyKtlv4f-u44C6UFbbYm4q8dsNZWO3gnQBGK1QH8/edit?usp=sharing)
+- [Deployment Guide](https://github.com/kemi-kun/gyo-main/blob/master/wiki/deployment.md)
+

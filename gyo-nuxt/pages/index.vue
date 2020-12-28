@@ -1,65 +1,58 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        gyo-main
-      </h1>
-      <div class="links">
-        <a
-          id="page-1"
-          href="page1"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          Page 1
-        </a>
+  <div id='index'>
+    <b-container>
+      <div class='title'>
+        <h1>𝕎𝕖𝕝𝕔𝕠𝕞𝕖 𝕥𝕠 𝔾𝕪𝕠𝕫𝕒</h1>
       </div>
-    </div>
+      <div class='wrap-button'>
+        <b-button v-if='!show' id='start-button' size='lg' v-on:click='show = true'>Start</b-button>
+        <select-mode v-if='show'></select-mode>
+      </div>
+      <div class='blank-line'>
+        <h1>    </h1>
+      </div>
+      <div class='how-to-play'>
+        <how-to-play></how-to-play>
+      </div>
+    </b-container>
   </div>
 </template>
 
 <script>
-export default {}
+import HowToPlay from '~/components/HowToPlay.vue'
+import SelectMode from '~/components/SelectMode.vue'
+export default {
+  components: {
+    HowToPlay,
+    SelectMode
+  },
+  data () {
+    return { show: false }
+  }
+}
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
+.bar {
+  height: 200px;
+}
+.title {
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  --var-txt-color: #000000;
+  color: var(--var-txt-color);
 }
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.wrap-button {
+  display: flex;
+  justify-content: center;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.blank-line {
+  height: 75px;
 }
-
-.links {
-  padding-top: 15px;
+.how-to-play {
+  display: flex;
+  justify-content: center;
+  --var-txt-color: #000000;
+  color: var(--var-txt-color);
 }
 </style>
