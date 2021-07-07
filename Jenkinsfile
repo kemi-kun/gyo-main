@@ -1,20 +1,35 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'node:14-buster'
+        }
+    }
 
     stages {
-        stage('Build') {
+        // stage('Checkout') {
+        //     steps {
+        //         git branch: 'master', url: 'https://github.com/kemi-kun/gyo-main.git'
+        //     }
+        // }
+        stage('Builder') { 
             steps {
-                echo 'Building..'
+                sh './builder.sh' 
             }
         }
+        // stage('Dependency installation') { 
+        //     steps {
+        //         sh 'npm install' 
+        //     }
+        // }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh 'npm run test'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh 'npm start'
             }
         }
     }
